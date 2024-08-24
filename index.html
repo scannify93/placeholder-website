@@ -5,14 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coming Soon</title>
     <style>
+        /* Reset margins and padding to ensure the page takes full viewport height */
         body {
             margin: 0;
-            height: 100vh;
+            padding: 0;
+            height: 100vh; /* Full height of the viewport */
             display: flex;
             justify-content: center;
             align-items: center;
             background: url('https://i.imgur.com/ixYCimy.png') no-repeat center center fixed;
-            background-size: cover;
+            background-size: cover; /* Ensures the background covers the entire viewport */
+        }
+
+        /* Ensure the image scales correctly on all devices */
+        @media (max-width: 768px) {
+            body {
+                background-size: cover; /* Keeps the cover effect on smaller screens */
+            }
         }
     </style>
 </head>
